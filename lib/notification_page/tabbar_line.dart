@@ -17,7 +17,6 @@ class TabbarLine extends StatelessWidget {
         height: 40.h,
         constraints: BoxConstraints.expand(height: 30),
         child: TabBar(
-          dividerColor: Colors.red,
           tabs: [
             Text(
               "All",
