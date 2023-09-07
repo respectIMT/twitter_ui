@@ -14,18 +14,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: ScreenUtilInit(
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) => const MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: MainScreen(),
         ),
-        home: ScreenUtilInit(
-          minTextAdapt: true,
-          splitScreenMode: true,
-          builder: (context, child) => const MaterialApp(
-            debugShowCheckedModeBanner: false,
-            home: MainScreen(),
-          ),
-        ));
+      ),
+    );
   }
 }

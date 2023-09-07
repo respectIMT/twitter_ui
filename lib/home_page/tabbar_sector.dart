@@ -16,7 +16,7 @@ class Tabbar_sector extends StatelessWidget {
       child: Container(
         height: 50.h,
         constraints: BoxConstraints.expand(height: 50),
-        child: TabBar(
+        child: TabBar( 
           tabs: [
             Text(
               "For you",
@@ -29,8 +29,9 @@ class Tabbar_sector extends StatelessWidget {
                   textStyle: TextStyle(fontSize: 15.sp, color: Colors.black)),
             )
           ],
+          isScrollable: false,
         ),
       ),
     );
-  }
+  } 
 }
